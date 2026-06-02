@@ -56,15 +56,15 @@
   padding: 2px 6px;
   margin: 0;
   border-radius: 10px;
-  background: #fff;
-  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.08), 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-  transition: box-shadow .2s, transform .2s;
+  background: transparent;
+  box-shadow: none;
+  transition: transform .2s;
   position: relative;
   z-index: 10;
 }
 
 .logo-highlight:hover {
-  box-shadow: 0 8px 40px 0 rgba(0, 0, 0, 0.12), 0 6px 24px 0 rgba(0, 0, 0, 0.08);
+  box-shadow: none;
   transform: scale(1.06) rotate(-1deg);
 }
 
@@ -87,8 +87,8 @@
 /* Desktop: limit full logo size for >1024px */
 .logo-img--full {
   display: block;
-  height: 48px;
-  max-width: 140px;
+  height: 56px;
+  max-width: 170px;
   width: auto;
   object-fit: contain;
 }
@@ -531,16 +531,16 @@ textarea {
     padding: 2px 6px;
     margin: 0;
     border-radius: 10px;
-    background: linear-gradient(90deg, #fff 40%, #ffe6e6 80%, #1a7abf22 100%);
-    box-shadow: 0 1px 4px 0 rgba(204, 32, 32, 0.08), 0 1px 2px 0 rgba(26, 122, 191, 0.05);
-    transition: box-shadow .2s, transform .2s, background .2s;
+    background: transparent;
+    box-shadow: none;
+    transition: transform .2s;
     position: relative;
     z-index: 10;
   }
 
   .logo-highlight:hover {
-    box-shadow: 0 8px 40px 0 rgba(204, 32, 32, 0.22), 0 6px 24px 0 rgba(26, 122, 191, 0.18);
-    background: linear-gradient(90deg, #ffe6e6 0%, #fff 60%, #1a7abf22 100%);
+    box-shadow: none;
+    background: transparent;
     transform: scale(1.06) rotate(-1deg);
   }
 
@@ -554,9 +554,9 @@ textarea {
 
   /* Full-logo variant: natural proportions, transparent background */
   .logo-img--full {
-    height: 56px;
+    height: 62px;
     width: auto;
-    max-width: 240px;
+    max-width: 270px;
     object-fit: contain;
     border-radius: 16px;
     padding: 4px;
