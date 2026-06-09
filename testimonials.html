@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Student Reviews - Panoramic Learning</title>
+  <meta name="description" content="Read what our students say about learning Dutch with Panoramic Learning. Real reviews from expats, professionals, and families across the world." />
+  <meta name="robots" content="noindex, nofollow" />
+  <link rel="icon" type="image/png" href="images/logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="flag-icons.min.css">
+  <style>
+    /* ===== TESTIMONIALS PAGE — page-specific ===== */
+    .hero.page-hero { min-height: 52vh; }
+
+    .main-menu a.nav-active {
+      color: var(--clr-accent) !important;
+      font-weight: 600;
+    }
+
+    .page-hero .hero-inner {
+      grid-template-columns: minmax(0, 1.2fr) minmax(280px, .8fr);
+      gap: 48px;
+    }
+
+    .page-hero .hero-stats {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 18px;
+      padding-top: 0;
+      border-top: none;
+      overflow-x: visible;
+      margin: 0;
+      width: min(100%, 330px);
+    }
+
+    .page-hero .hero-sub {
+      max-width: 560px;
+    }
+
+    .testimonials-stats-col {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+    }
+
+    .page-hero .stat {
+      min-width: 0;
+      text-align: left;
+      padding: 22px 24px;
+      background: rgba(255, 255, 255, .08);
+      border: 1px solid rgba(255, 255, 255, .16);
+      border-radius: var(--radius-lg);
+      box-shadow: 0 14px 34px rgba(7, 28, 45, .18);
+      backdrop-filter: blur(14px);
+    }
+
+    /* ---------- REVIEWS GRID ---------- */
+    .reviews-section {
+      padding-block: 80px;
+      background: var(--clr-bg);
+      position: relative;
+    }
+    .reviews-grid {
+      columns: 3 320px;
+      column-gap: 24px;
+      margin-top: 56px;
+    }
+    .review-card {
+      break-inside: avoid;
+      background: #fff;
+      border: 1px solid var(--clr-border);
+      border-radius: var(--radius-lg);
+      padding: 28px 28px 24px;
+      box-shadow: var(--shadow-sm);
+      margin-bottom: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      transition: transform .22s ease, box-shadow .22s ease;
+    }
+    .review-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-md);
+    }
+    .review-stars {
+      color: var(--clr-accent);
+      font-size: .95rem;
+      letter-spacing: .12em;
+    }
+    .review-text {
+      font-size: .9rem;
+      color: var(--clr-mid);
+      line-height: 1.75;
+      font-style: italic;
+      margin: 0;
+      flex: 1;
+    }
+    .review-author {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      border-top: 1px solid var(--clr-border);
+      padding-top: 14px;
+      margin-top: 4px;
+    }
+    .review-avatar {
+      width: 40px;
+      height: 40px;
+      flex-shrink: 0;
+      background: linear-gradient(135deg, var(--clr-primary), #1A7ABF);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-weight: 700;
+      font-size: .8rem;
+      letter-spacing: .03em;
+    }
+    .review-author strong {
+      font-size: .88rem;
+      color: var(--clr-dark);
+    }
+
+    /* ---------- SORT / FILTER BAR ---------- */
+    .reviews-toolbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 48px;
+    }
+    .reviews-count {
+      font-size: .9rem;
+      color: var(--clr-mid);
+    }
+    .reviews-count strong {
+      color: var(--clr-dark);
+    }
+    .sort-btn-group {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+    .sort-btn {
+      padding: 7px 18px;
+      border-radius: 99px;
+      border: 1.5px solid var(--clr-border);
+      background: #fff;
+      font-size: .82rem;
+      font-weight: 600;
+      color: var(--clr-mid);
+      cursor: pointer;
+      transition: all .18s;
+    }
+    .sort-btn:hover,
+    .sort-btn.active {
+      border-color: var(--clr-primary);
+      color: var(--clr-primary);
+      background: rgba(26,90,191,.05);
+    }
+
+    /* ---------- HIGHLIGHT BANNER ---------- */
+    .review-highlight {
+      background: linear-gradient(135deg, #0d3660 0%, #1a5abf 55%, #1a7abf 100%);
+      border-radius: var(--radius-xl);
+      padding: 52px 56px;
+      color: #fff;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 32px;
+      align-items: center;
+      margin-bottom: 60px;
+      position: relative;
+      overflow: hidden;
+    }
+    .review-highlight::before {
+      content: '\201C';
+      position: absolute;
+      top: -20px;
+      left: 20px;
+      font-family: var(--font-heading);
+      font-size: 14rem;
+      opacity: .08;
+      line-height: 1;
+      color: #fff;
+      pointer-events: none;
+    }
+    .review-highlight blockquote {
+      margin: 0;
+      font-family: var(--font-heading);
+      font-size: 1.35rem;
+      font-style: italic;
+      line-height: 1.6;
+      color: #fff;
+    }
+    .review-highlight cite {
+      display: block;
+      margin-top: 18px;
+      font-style: normal;
+      font-size: .88rem;
+      opacity: .75;
+    }
+    .review-highlight-badge {
+      flex-shrink: 0;
+      background: rgba(255,255,255,.12);
+      border: 1.5px solid rgba(255,255,255,.25);
+      border-radius: var(--radius-lg);
+      padding: 20px 28px;
+      text-align: center;
+    }
+    .review-highlight-badge strong {
+      display: block;
+      font-size: 2.8rem;
+      font-weight: 800;
+      color: #fff;
+      line-height: 1;
+    }
+    .review-highlight-badge span {
+      font-size: .78rem;
+      opacity: .8;
+      margin-top: 4px;
+      display: block;
+    }
+
+    /* ---------- RESPONSIVE ---------- */
+    @media (max-width: 900px) {
+      .page-hero .hero-inner {
+        grid-template-columns: 1fr;
+      }
+      .testimonials-stats-col {
+        justify-content: flex-start;
+      }
+      .page-hero .hero-stats {
+        width: 100%;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+      .review-highlight {
+        grid-template-columns: 1fr;
+        padding: 36px 32px;
+      }
+      .review-highlight-badge { display: none; }
+    }
+    @media (max-width: 640px) {
+      .page-hero .hero-stats {
+        grid-template-columns: 1fr;
+      }
+      .page-hero .stat {
+        text-align: center;
+      }
+      .reviews-grid { columns: 1; }
+      .review-highlight { padding: 28px 22px; }
+      .review-highlight blockquote { font-size: 1.05rem; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ========== HEADER ========== -->
+  <header class="site-header" id="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">
+        <span class="logo-highlight logo-highlight--full">
+          <img src="images/full-logo.png" alt="Panoramic Learning" class="logo-img logo-img--full" />
+        </span>
+        <span class="logo-highlight logo-highlight--tulip">
+          <img src="images/logo.png" alt="Panoramic Learning Tulip Logo" class="logo-img logo-img--tulip" />
+        </span>
+      </a>
+      <nav class="main-nav" id="main-nav">
+        <ul class="main-menu">
+          <li><a href="approach.html">Our Approach</a></li>
+          <li><a href="companies.html">For Companies</a></li>
+          <li><a href="south-africans.html">For South Africans</a></li>
+          <li><a href="english.html">Learn English</a></li>
+          <li><a href="testimonials.html" class="nav-active">Testimonials</a></li>
+          <li><a href="contact.html">Contact us</a></li>
+        </ul>
+      </nav>
+      <div class="header-actions">
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ========== HERO ========== -->
+  <section class="hero page-hero" id="home">
+    <div class="hero-bg"></div>
+    <div class="container hero-inner">
+      <div class="hero-content slide-in-left">
+        <p class="hero-eyebrow">Student Reviews</p>
+        <h1 class="hero-title">What our<br>students say</h1>
+        <p class="hero-sub">Real stories from expats, families, and professionals across the world who learned Dutch with Panoramic Learning.</p>
+        <div class="hero-actions fade-up anim-delay-1">
+          <a href="index.html#booking" class="btn btn-primary">Book Your First Lesson</a>
+          <a href="#reviews" class="btn btn-outline">Read Reviews</a>
+        </div>
+      </div>
+      <div class="testimonials-stats-col slide-in-right">
+        <div class="hero-stats fade-up anim-delay-2">
+          <div class="stat"><strong>48+</strong><span>Verified reviews</span></div>
+          <div class="stat"><strong>99.7%</strong><span>NT2 pass rate</span></div>
+          <div class="stat"><strong>★★★★★</strong><span>Average rating</span></div>
+        </div>
+      </div>
+    </div>
+    <div aria-hidden="true" style="position:absolute;left:-180px;bottom:-90px;opacity:0.13;z-index:0;pointer-events:none;">
+      <img src="images/black-logo.png" alt="" style="width:600px;height:auto;display:block;" />
+    </div>
+    <div aria-hidden="true" style="position:absolute;right:-180px;bottom:-90px;opacity:0.13;z-index:0;pointer-events:none;">
+      <img src="images/black-logo.png" alt="" style="width:600px;height:auto;display:block;" />
+    </div>
+    <div class="hero-wave">
+      <svg viewBox="0 0 1440 60" preserveAspectRatio="none">
+        <path d="M0,30 C360,60 1080,0 1440,30 L1440,60 L0,60 Z" fill="#ffffff" />
+      </svg>
+    </div>
+  </section>
+
+  <!-- ========== REVIEWS ========== -->
+  <section class="reviews-section" id="reviews">
+    <div aria-hidden="true" style="position:absolute;right:-50px;top:-20px;opacity:0.06;z-index:0;pointer-events:none;"><img src="images/logo.png" alt="" style="width:300px;height:auto;display:block;filter:hue-rotate(150deg);"></div>
+    <div aria-hidden="true" style="position:absolute;left:-50px;bottom:-30px;opacity:0.05;z-index:0;pointer-events:none;"><img src="images/logo.png" alt="" style="width:280px;height:auto;display:block;"></div>
+    <div class="container">
+
+      <!-- Featured quote -->
+      <div class="review-highlight fade-up">
+        <div>
+          <blockquote>
+            &ldquo;In under 2 years the team at Panoramic Learning was able to raise my non-existent Dutch skill to a B2 level where I passed my exams with flying colors! I cannot recommend Panoramic Learning enough — the one-on-one tutoring ensures a degree of high quality and understanding of the language you are trying to learn.&rdquo;
+            <cite>— C.S., B2 graduate</cite>
+          </blockquote>
+        </div>
+        <div class="review-highlight-badge">
+          <strong>99.7%</strong>
+          <span>NT2<br>Pass Rate</span>
+        </div>
+      </div>
+
+      <!-- Toolbar -->
+      <div class="reviews-toolbar fade-up">
+        <p class="reviews-count"><strong id="review-count">48</strong> verified student reviews</p>
+        <div class="sort-btn-group">
+          <button class="sort-btn active" data-sort="random">Shuffle</button>
+          <button class="sort-btn" data-sort="alpha">A – Z</button>
+          <button class="sort-btn" data-sort="length-desc">Longest first</button>
+          <button class="sort-btn" data-sort="length-asc">Shortest first</button>
+        </div>
+      </div>
+
+      <!-- Cards injected by JS -->
+      <div class="reviews-grid" id="reviews-grid" aria-live="polite"></div>
+
+    </div>
+  </section>
+
+  <!-- ========== CTA BAND ========== -->
+  <section class="cta-band">
+    <div class="container cta-band-inner">
+      <h2>Ready to write your own success story?</h2>
+      <p>Join hundreds of students already living, working, and thriving in the Netherlands.</p>
+      <a href="index.html#booking" class="btn btn-white">Book Your First Lesson</a>
+    </div>
+  </section>
+
+  <!-- ========== PARTNERS STRIP ========== -->
+  <section class="partners">
+    <div class="container">
+      <p class="partners-label">Trusted partner of</p>
+      <div class="partners-logos">
+        <span class="partner-logo"><img src="images/home-made.jpg" alt="Home.Made logo" style="height:68px;" /></span>
+        <span class="partner-logo"><img src="images/expat-directory.png" alt="Expat Directory logo" style="height:68px;" /></span>
+        <span class="partner-logo"><img src="images/panoramic-advice.png" alt="Panoramic Advice logo" style="height:68px;" /></span>
+        <span class="partner-logo"><img src="images/situ.jpg" alt="Situ logo" style="height:68px;" /></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="site-footer">
+    <div aria-hidden="true" style="position:absolute;right:-60px;bottom:-40px;opacity:0.15;z-index:0;pointer-events:none;"><img src="images/black-logo.png" alt="" style="width:340px;height:auto;display:block;filter:invert(1);"></div>
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="logo logo--footer">
+          <img src="images/full-logo.png" alt="Panoramic Learning" class="logo-img logo-img--footer" />
+        </a>
+        <p class="footer-tagline">Learn Dutch with us</p>
+        <p class="footer-quote">&ldquo;De grenzen van mijn taal zijn<br>de grenzen van mijn wereld.&rdquo;<br><em>, Ludwig Wittgenstein</em></p>
+      </div>
+      <div class="footer-col">
+        <h4>Pages</h4>
+        <a href="index.html">Home</a>
+        <a href="approach.html">Our Approach</a>
+        <a href="companies.html">For Companies</a>
+        <a href="south-africans.html">For South Africans</a>
+        <a href="english.html">Learn English</a>
+        <a href="testimonials.html">Testimonials</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <a href="mailto:judith@panoramic-learning.com" style="white-space:nowrap;">judith@panoramic-learning.com</a>
+        <a href="tel:+31612345678" style="white-space:nowrap;">+31 6 12345678</a>
+        <div class="social-btns social-btns--footer">
+          <a href="https://www.facebook.com/panoramiclearning" target="_blank" rel="noopener" class="social-btn social-btn--fb" aria-label="Facebook">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+          </a>
+          <a href="https://www.instagram.com/panoramic_learning" target="_blank" rel="noopener" class="social-btn social-btn--ig" aria-label="Instagram">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <p>&copy; 2026 Panoramic Learning&trade;, All rights reserved.</p>
+        <div class="footer-legal">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script src="scroll-animate.js"></script>
+</body>
+</html>
