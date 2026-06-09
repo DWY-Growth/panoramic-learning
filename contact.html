@@ -319,6 +319,7 @@
         }
 
         @media (max-width: 700px) {
+
             /* Stack contact hero card on smaller tablets */
             .hero-card--main.contact-bg {
                 flex-direction: column;
@@ -328,25 +329,30 @@
                 text-align: center;
                 min-height: unset;
             }
-            .hero-card--main.contact-bg > div {
+
+            .hero-card--main.contact-bg>div {
                 flex-direction: column !important;
                 gap: 14px !important;
                 align-items: center !important;
                 width: 100%;
                 text-align: center;
             }
-            .hero-card--main.contact-bg > div > div:first-child {
+
+            .hero-card--main.contact-bg>div>div:first-child {
                 min-width: unset !important;
             }
         }
+
         @media (max-width: 600px) {
             .hero.page-hero {
                 min-height: 45vh;
             }
+
             /* Reduce form padding on phones */
             .contact-form-wrap {
                 padding: 22px 16px;
             }
+
             /* Stack social buttons vertically */
             .contact-social-row {
                 flex-direction: column;
@@ -407,7 +413,8 @@
                     <div style="display:flex;align-items:center;gap:32px;width:100%;">
                         <div style="min-width:90px;text-align:center;">
                             <div style="font-size:3rem;line-height:1;"> <img src="images/logo.png"
-                                    alt="Panoramic Learning" style="max-width:54px;height:54px;display:block;margin:auto;" /></div>
+                                    alt="Panoramic Learning"
+                                    style="max-width:54px;height:54px;display:block;margin:auto;" /></div>
                             <p
                                 style="font-family:var(--font-heading);font-size:1.15rem;font-weight:700;color:#fff;margin:10px 0 0 0;">
                                 Judith Siemers</p>
@@ -467,7 +474,8 @@
                     <div class="contact-person-card">
                         <div class="contact-person-header">
                             <div class="contact-avatar"> <img src="images/logo.png" alt="Panoramic Learning"
-                                    class="cert-logo-img" style="max-width:48px;height:48px;display:block;margin:auto;" /></div>
+                                    class="cert-logo-img"
+                                    style="max-width:48px;height:48px;display:block;margin:auto;" /></div>
                             <h3>Judith Siemers</h3>
                             <p>Managing Partner, Panoramic Learning</p>
                         </div>
@@ -476,7 +484,8 @@
                                 <div class="contact-detail-icon">&#x2709;&#xFE0F;</div>
                                 <div>
                                     <p class="detail-label">Email</p>
-                                    <a href="mailto:judith@panoramic-learning.com" style="white-space:nowrap;">judith@panoramic-learning.com</a><br>
+                                    <a href="mailto:judith@panoramic-learning.com"
+                                        style="white-space:nowrap;">judith@panoramic-learning.com</a><br>
                                     <a href="tel:+31612345678" style="white-space:nowrap;">+31 6 12345678</a>
                                 </div>
                             </div>
@@ -629,6 +638,114 @@
         </div>
     </section>
 
+    <!-- ========== TESTIMONIALS ========== -->
+    <section class="section section--alt testimonials" id="testimonials">
+        <!-- tulip logo watermarks -->
+        <div aria-hidden="true"
+            style="position:absolute;right:-50px;bottom:-30px;opacity:0.09;z-index:0;pointer-events:none;"><img
+                src="images/logo.png" alt="" style="width:320px;height:auto;display:block;"></div>
+        <div aria-hidden="true"
+            style="position:absolute;left:-50px;top:-20px;opacity:0.07;z-index:0;pointer-events:none;"><img
+                src="images/logo.png" alt="" style="width:250px;height:auto;display:block;filter:hue-rotate(150deg);">
+        </div>
+        <div class="container">
+            <div class="section-header fade-up">
+                <p class="section-eyebrow">Student Reviews</p>
+                <h2 class="section-title">What our students say</h2>
+            </div>
+            <div class="testimonial-track-wrap">
+                <div class="testimonial-track" id="testimonial-track">
+                    <div class="testimonial-card">
+                        <div class="testimonial-stars">★★★★★</div>
+                        <p>"Within three months I could hold a full conversation with my Dutch colleagues. The cultural
+                            context Judith brings to every lesson is what makes Panoramic Learning different."</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">SR</div>
+                            <div><strong>Sarah R.</strong><br><span>Software Engineer, relocated from UK</span></div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-stars">★★★★★</div>
+                        <p>"I tried two other Dutch courses before finding Panoramic Learning. The grammar-first
+                            approach finally made things click. Highly recommend for anyone serious about learning."</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">MK</div>
+                            <div><strong>Marco K.</strong><br><span>Marketing Manager, Amsterdam</span></div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-stars">★★★★★</div>
+                        <p>"Flexible scheduling was a game changer, I'm based in New York and my tutor is in Europe. We
+                            always find a time that works. The lessons feel personal, never generic."</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">LP</div>
+                            <div><strong>Lena P.</strong><br><span>Expat preparing for relocation</span></div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-stars">★★★★★</div>
+                        <p>"I passed my NT2 exam on the first attempt. My tutor prepared me not just with language, but
+                            with confidence. The investment paid off many times over."</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">AT</div>
+                            <div><strong>Ayşe T.</strong><br><span>Permanent residency applicant</span></div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-stars">★★★★★</div>
+                        <p>"The combination of real-world Dutch, news, idioms, humour, with proper grammar made learning
+                            genuinely enjoyable. I actually look forward to my lessons."</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">JB</div>
+                            <div><strong>James B.</strong><br><span>Teacher, The Hague</span></div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-stars">★★★★★</div>
+                        <p>"My whole family joined, kids and adults together. Each of us got a tailored programme. It
+                            felt like a private language school, not a one-size-fits-all online course."</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">FD</div>
+                            <div><strong>Fatima D.</strong><br><span>Relocated family, Rotterdam</span></div>
+                        </div>
+                    </div>
+                    <!-- Duplicate cards for infinite scroll effect -->
+                    <div class="testimonial-card">
+                        <div class="testimonial-stars">★★★★★</div>
+                        <p>"Within three months I could hold a full conversation with my Dutch colleagues. The cultural
+                            context Judith brings to every lesson is what makes Panoramic Learning different."</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">SR</div>
+                            <div><strong>Sarah R.</strong><br><span>Software Engineer, relocated from UK</span></div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-stars">★★★★★</div>
+                        <p>"I tried two other Dutch courses before finding Panoramic Learning. The grammar-first
+                            approach finally made things click. Highly recommend for anyone serious about learning."</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">MK</div>
+                            <div><strong>Marco K.</strong><br><span>Marketing Manager, Amsterdam</span></div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-stars">★★★★★</div>
+                        <p>"Flexible scheduling was a game changer, I'm based in New York and my tutor is in Europe. We
+                            always find a time that works. The lessons feel personal, never generic."</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">LP</div>
+                            <div><strong>Lena P.</strong><br><span>Expat preparing for relocation</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-nav">
+                <span class="tnav-arrow" id="tnav-prev" aria-label="Previous" tabindex="0">‹</span>
+                <span class="tnav-arrow" id="tnav-next" aria-label="Next" tabindex="0">›</span>
+            </div>
+        </div>
+    </section>
+
     <!-- ========== PARTNERS STRIP ========== -->
     <section class="partners">
         <div class="container">
@@ -674,7 +791,8 @@
             </div>
             <div class="footer-col">
                 <h4>Contact</h4>
-                <a href="mailto:judith@panoramic-learning.com" style="white-space:nowrap;">judith@panoramic-learning.com</a>
+                <a href="mailto:judith@panoramic-learning.com"
+                    style="white-space:nowrap;">judith@panoramic-learning.com</a>
                 <a href="tel:+16087389747">+1 608 738 9747</a>
                 <div class="social-btns social-btns--footer" style="margin-top:10px;">
                     <a href="https://www.facebook.com/panoramiclearning" target="_blank" rel="noopener"
