@@ -2199,6 +2199,17 @@ textarea {
   box-shadow: 0 4px 12px rgba(220, 39, 67, .35);
 }
 
+.social-btn--li {
+  background: #0A66C2;
+  color: #fff;
+}
+
+.social-btn--li:hover {
+  background: #004182;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(10, 102, 194, .35);
+}
+
 .social-btns--footer .social-btn {
   width: 34px;
   height: 34px;
