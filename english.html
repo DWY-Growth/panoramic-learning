@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -103,14 +103,14 @@
         }
 
         /* ---------- FEATURE CARDS ---------- */
-        .en-features-grid {
+        .features-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 24px;
             margin-top: 48px;
         }
 
-        .en-feature-card {
+        .feature-card {
             background: #fff;
             border-radius: var(--radius-lg);
             padding: 28px 24px;
@@ -122,23 +122,23 @@
             transition: transform 0.22s ease, box-shadow 0.22s ease;
         }
 
-        .en-feature-card:hover {
+        .feature-card:hover {
             transform: translateY(-5px);
             box-shadow: var(--shadow-lg);
         }
 
-        .en-feature-card--accent {
+        .feature-card--accent {
             border-color: rgba(26, 122, 191, 0.28);
             background: linear-gradient(145deg, rgba(26, 122, 191, 0.04), rgba(26, 122, 191, 0.09));
         }
 
-        .en-feature-card-icon {
+        .feature-card-icon {
             font-size: 2.2rem;
             line-height: 1;
             margin-bottom: 2px;
         }
 
-        .en-feature-card h3 {
+        .feature-card h3 {
             font-family: var(--font-heading);
             font-size: 1.05rem;
             color: var(--clr-dark);
@@ -146,7 +146,7 @@
             font-weight: 600;
         }
 
-        .en-feature-card p {
+        .feature-card p {
             font-size: 0.9rem;
             color: var(--clr-mid);
             margin: 0;
@@ -154,7 +154,7 @@
         }
 
         /* 5th card centred in 3-col grid */
-        .en-feature-card:last-child:nth-child(3n+2) {
+        .feature-card:last-child:nth-child(3n+2) {
             grid-column: 2 / 4;
             justify-self: center;
         }
@@ -208,11 +208,11 @@
                 grid-template-columns: 1fr;
             }
 
-            .en-features-grid {
+            .features-grid {
                 grid-template-columns: repeat(2, 1fr);
             }
 
-            .en-feature-card:last-child:nth-child(3n+2) {
+            .feature-card:last-child:nth-child(3n+2) {
                 grid-column: auto;
                 max-width: none;
             }
@@ -223,7 +223,7 @@
         }
 
         @media (max-width: 600px) {
-            .en-features-grid {
+            .features-grid {
                 grid-template-columns: 1fr;
             }
 
@@ -277,10 +277,10 @@
             <div class="hero-content slide-in-left">
                 <p class="hero-eyebrow">Private English Lessons</p>
                 <h1 class="hero-title">Learn English <em style="font-style:italic;color:#a8d8f5;">with us!</em></h1>
-                <p class="hero-sub">Private English lessons via Google Meet for intermediate learners. Build
+                <p class="hero-sub">Private English lessons via Google Meet for learners who already have a basic foundation in English. Build
                     real confidence, fluency, and communication skills with native English-speaking tutors.</p>
                 <div class="hero-actions fade-up anim-delay-1">
-                    <a href="index.html#booking" class="btn btn-primary">Get Started Today</a>
+                    <a href="contact.html#contact-form" class="btn btn-primary">Get Started Today</a>
                     <a href="#recognise" class="btn btn-outline">Does this sound like you?</a>
                 </div>
                 <div class="hero-stats fade-up anim-delay-2">
@@ -340,7 +340,7 @@
             <div class="section-header fade-up">
                 <p class="section-eyebrow">Does This Sound Like You?</p>
                 <h2 class="section-title">You Are Not <em>Alone</em></h2>
-                <p class="section-sub">Many highly educated professionals feel held back by their English. We hear these
+                <p class="section-sub">Many professionals feel held back by their English. We hear these
                     concerns every day.</p>
             </div>
 
@@ -390,7 +390,7 @@
             <div class="help-banner fade-up">
                 <h3>Help is on its way!</h3>
                 <p>So why wait? Start building your confidence in English today.</p>
-                <a href="index.html#booking" class="btn btn-primary">Start Learning Now</a>
+                <a href="contact.html#contact-form" class="btn btn-primary">Start Learning Now</a>
             </div>
         </div>
     </section>
@@ -474,7 +474,7 @@
                         learners</li>
                     <li><span class="feature-icon">&#x2713;</span> Focus on real-life confidence and communication</li>
                 </ul>
-                <a href="contact.html" class="btn btn-primary">Start Your English Journey</a>
+                <a href="contact.html#contact-form" class="btn btn-primary">Start Your English Journey</a>
             </div>
         </div>
     </section>
@@ -494,40 +494,40 @@
                 </p>
             </div>
 
-            <div class="en-features-grid">
+            <div class="features-grid">
 
-                <div class="en-feature-card en-feature-card--accent fade-up anim-delay-1">
-                    <div class="en-feature-card-icon">&#x1F4D6;</div>
+                <div class="feature-card feature-card--accent fade-up anim-delay-1">
+                    <div class="feature-card-icon">&#x1F4D6;</div>
                     <h3>Grammar Refresh</h3>
                     <p>If your English grammar feels a bit rusty, we help you rebuild a strong foundation with clear,
                         practical
                         explanations you can immediately use in real conversations.</p>
                 </div>
 
-                <div class="en-feature-card fade-up anim-delay-2">
-                    <div class="en-feature-card-icon">&#x1F5E3;&#xFE0F;</div>
+                <div class="feature-card fade-up anim-delay-2">
+                    <div class="feature-card-icon">&#x1F5E3;&#xFE0F;</div>
                     <h3>In-Depth Conversations</h3>
                     <p>Engage in meaningful discussions on a wide range of topics, helping you think and respond
                         naturally in
                         English.</p>
                 </div>
 
-                <div class="en-feature-card fade-up anim-delay-3">
-                    <div class="en-feature-card-icon">&#x270F;&#xFE0F;</div>
+                <div class="feature-card fade-up anim-delay-3">
+                    <div class="feature-card-icon">&#x270F;&#xFE0F;</div>
                     <h3>Interactive &amp; Engaging Exercises</h3>
                     <p>Learn by doing &mdash; with activities that make language stick and build fluency step by step.
                     </p>
                 </div>
 
-                <div class="en-feature-card en-feature-card--accent fade-up anim-delay-1">
-                    <div class="en-feature-card-icon">&#x1F310;</div>
+                <div class="feature-card feature-card--accent fade-up anim-delay-1">
+                    <div class="feature-card-icon">&#x1F310;</div>
                     <h3>Focus on Real Communication</h3>
                     <p>We teach neutral, practical English while also introducing key regional differences, helping you
                         communicate confidently in any international setting.</p>
                 </div>
 
-                <div class="en-feature-card fade-up anim-delay-2">
-                    <div class="en-feature-card-icon">&#x1F4AA;</div>
+                <div class="feature-card fade-up anim-delay-2">
+                    <div class="feature-card-icon">&#x1F4AA;</div>
                     <h3>Building Self-Confidence</h3>
                     <p>Alongside language skills, we help you develop the confidence to speak up, express yourself
                         clearly, and
@@ -576,7 +576,7 @@
                     <p>Why choose Panoramic Learning? Because confidence in English starts with the right approach
                         &mdash; and
                         the right partner.</p>
-                    <a href="index.html#booking" class="btn btn-primary" style="margin-top:20px;">Take the First Step</a>
+                    <a href="contact.html#contact-form" class="btn btn-primary" style="margin-top:20px;">Take the First Step</a>
                 </div>
 
             </div>
@@ -691,7 +691,7 @@
         <div class="container cta-band-inner">
             <h2>Ready to speak English with confidence?</h2>
             <p>Join learners already communicating fluently and fearlessly in English.</p>
-            <a href="index.html#booking" class="btn btn-white">Let's Begin</a>
+            <a href="contact.html#contact-form" class="btn btn-white">Let's Begin</a>
         </div>
     </section>
 
