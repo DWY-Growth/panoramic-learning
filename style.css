@@ -1488,7 +1488,7 @@ textarea {
 }
 
 .course-card {
-  background: linear-gradient(135deg, #fffafa 0%, #fde5e5 55%, #e4f1fb 100%);
+  background: #fff;
   border: 1px solid var(--clr-border);
   border-radius: var(--radius-lg);
   padding: 32px 28px;
@@ -1503,7 +1503,8 @@ textarea {
 }
 
 .course-card--featured {
-  border-color: var(--clr-primary);
+  background: linear-gradient(145deg, rgba(26, 122, 191, 0.04), rgba(26, 122, 191, 0.09));
+  border-color: rgba(26, 122, 191, 0.28);
   box-shadow: 0 0 0 2px var(--clr-primary), var(--shadow-md);
 }
 
@@ -1541,10 +1542,10 @@ textarea {
 }
 
 .course-card {
-  background: linear-gradient(135deg, #fffafa 0%, #fde5e5 55%, #e4f1fb 100%);
-  border: 2.5px solid #1a5abf33;
+  background: #fff;
+  border: 1px solid var(--clr-border);
   border-radius: 22px;
-  box-shadow: 0 8px 32px 0 rgba(26, 90, 191, 0.18), 0 2px 8px 0 rgba(204, 32, 32, 0.08);
+  box-shadow: var(--shadow-sm);
   padding: 32px 28px;
   position: relative;
   transition: all .2s ease;
@@ -1663,11 +1664,16 @@ textarea {
 .testimonial-card {
   max-width: 360px;
   flex-shrink: 0;
-  background: var(--clr-bg);
+  background: #fff;
   border: 1px solid var(--clr-border);
   border-radius: var(--radius-lg);
   padding: 32px;
   box-shadow: var(--shadow-sm);
+}
+
+.testimonial-card:nth-child(even) {
+  background: linear-gradient(145deg, rgba(26, 122, 191, 0.04), rgba(26, 122, 191, 0.09));
+  border-color: rgba(26, 122, 191, 0.28);
 }
 
 .testimonial-stars {

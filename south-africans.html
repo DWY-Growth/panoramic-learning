@@ -28,12 +28,23 @@
       font-weight: 600;
     }
 
-    /* ---------- HERO CARD: SA colours ---------- */
+    /* ---------- HERO CARD: SA image background ---------- */
     .hero-card--main.sa-bg {
       position: relative;
       overflow: hidden;
       border: 2.5px solid var(--clr-accent) !important;
-      background: linear-gradient(145deg, #004d2e 0%, #007A4D 55%, #005c3a 100%);
+    }
+
+    .hero-card--main.sa-bg::before {
+      content: '';
+      position: absolute;
+      inset: -10px;
+      background-image: url('images/south-african.png');
+      background-size: cover;
+      background-position: center;
+      filter: blur(3px) brightness(0.5);
+      z-index: 1;
+      pointer-events: none;
     }
 
     .hero-card--main.sa-bg>* {
@@ -236,7 +247,6 @@
   <section class="hero page-hero" id="sa-top">
     <div class="hero-bg"></div>
     <div class="container hero-inner">
-
       <div class="hero-content slide-in-left">
         <p class="hero-eyebrow">Specialised Dutch Tuition</p>
         <h1 class="hero-title">Dutch for <em style="font-style:italic;color:#a8d8f5;">South Africans</em></h1>
@@ -257,11 +267,8 @@
         <div class="hero-card hero-card--main sa-bg">
           <!-- SA flag stripe decoration -->
           <div aria-hidden="true" style="position:absolute;inset:0;z-index:1;overflow:hidden;pointer-events:none;">
-            <div style="position:absolute;bottom:0;left:0;width:100%;height:6px;background:#FFB612;"></div>
-            <div style="position:absolute;bottom:6px;left:0;width:100%;height:4px;background:#fff;"></div>
-            <div style="position:absolute;bottom:10px;left:0;width:100%;height:6px;background:#DE3831;"></div>
           </div>
-          <div class="hero-card-icon"><i class="fi fi-za" style="font-size:2.4rem;"></i></div>
+          <div class="hero-card-icon">&#x1F1FF;&#x1F1E6;</div>
           <p class="hero-card-quote" style="color:#fff;">&ldquo;Jou Afrikaans-agtergrond is jou voorsprong &mdash; kom
             ons bou daarop.&rdquo;</p>
           <p class="hero-card-author" style="color:rgba(255,255,255,0.7);">Tailored for Afrikaans &amp; English speakers
@@ -306,7 +313,7 @@
 
       <div class="sa-lang-split fade-up">
         <div class="sa-lang-block">
-          <div class="sa-lang-label"><i class="fi fi-gb"></i> English</div>
+          <div class="sa-lang-label">&#x1F1EC;&#x1F1E7; English</div>
           <p>We have extensive experience teaching Dutch to South Africans whose first language is Afrikaans and/or English.</p>
           <p>Our tutors understand the unique challenges South Africans face when learning Dutch. They know which aspects of the language typically require less attention and which language skills need extra focus.</p>
           <p>For Afrikaans speakers, reading and listening comprehension in Dutch are often relatively easy to master, while speaking and writing usually present greater challenges. That is why we provide targeted support focused specifically to these needs.</p>
@@ -314,7 +321,7 @@
         </div>
 
         <div class="sa-lang-block sa-lang-block--afrikaans">
-          <div class="sa-lang-label"><i class="fi fi-za"></i> Afrikaans</div>
+          <div class="sa-lang-label">&#x1F1FF;&#x1F1E6; Afrikaans</div>
           <p>Ons het uitgebreide ervaring in die onderrig van Nederlands aan Suid-Afrikaners wie se moedertaal Afrikaans en/of Engels is.</p>
           <p>Ons dosente verstaan die unieke uitdagings waarmee Suid-Afrikaners te doen kry wanneer hulle Nederlands aanleer. Ons dosente weet presies watter aspekte van die taal minder aandag verg en watter spesifieke taalvaardighede ekstra aandag benodig.</p>
           <p>Vir Afrikaanssprekendes is Nederlandse lees- en luistervaardighede dikwels relatief maklik om te bemeester, terwyl skryf en praat gewoonlik groter uitdagings inhou. Daarom bied ons doelgerigte ondersteuning wat spesifiek op hierdie behoeftes fokus.</p>
@@ -387,28 +394,28 @@
             conversational flow so you sound confident, not translated.</p>
         </div>
 
-        <div class="feature-card fade-up anim-delay-3">
+        <div class="feature-card feature-card--accent fade-up anim-delay-3">
           <div class="feature-card-icon">&#x270D;&#xFE0F;</div>
           <h3>Writing accuracy</h3>
           <p>Dutch spelling, grammar, and sentence structure diverge from Afrikaans in important ways. We focus on the
             rules that trip up South Africans most &mdash; efficiently.</p>
         </div>
 
-        <div class="feature-card feature-card--accent fade-up anim-delay-1">
+        <div class="feature-card fade-up anim-delay-1">
           <div class="feature-card-icon">&#x1F50A;</div>
           <h3>Dutch pronunciation</h3>
           <p>The Dutch &ldquo;g&rdquo;, long vowels, and diphthongs are common stumbling blocks. We provide targeted
             pronunciation exercises designed specifically for South African speakers.</p>
         </div>
 
-        <div class="feature-card fade-up anim-delay-2">
+        <div class="feature-card feature-card--accent fade-up anim-delay-2">
           <div class="feature-card-icon">&#x1F1F3;&#x1F1F1;</div>
           <h3>Dutch workplace &amp; culture</h3>
           <p>Understanding Dutch directness, social norms, and professional communication makes integration smoother. We
             weave culture into every lesson.</p>
         </div>
 
-        <div class="feature-card feature-card--accent fade-up anim-delay-3">
+        <div class="feature-card fade-up anim-delay-3">
           <div class="feature-card-icon">&#x1F91D;</div>
           <h3>One dedicated tutor</h3>
           <p>You work with one tutor throughout your programme. They get to know your background, track your progress,
