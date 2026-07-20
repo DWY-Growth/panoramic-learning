@@ -1243,6 +1243,57 @@ textarea {
   margin-left: auto;
   margin-right: auto;
 }
+a.partner-logo {
+  display: inline-flex;
+  align-items: center;
+  opacity: 0.82;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  text-decoration: none;
+}
+a.partner-logo:hover {
+  opacity: 1;
+  transform: translateY(-2px);
+}
+.partner-text-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 68px;
+  min-width: 72px;
+  padding: 0 14px;
+  border: 1.5px solid var(--clr-border);
+  border-radius: 10px;
+  line-height: 1.2;
+}
+.partner-text-logo strong {
+  font-size: 1.25rem;
+  font-weight: 800;
+  letter-spacing: 0.01em;
+  color: var(--clr-dark);
+}
+.partner-text-logo small {
+  font-size: 0.62rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--clr-light);
+  margin-top: 2px;
+}
+.partner-text-logo--dwy strong {
+  background: linear-gradient(90deg, #4F6EF7, #A855F7);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.partner-text-logo--mp {
+  border-color: #1A3B7A;
+}
+.partner-text-logo--mp strong {
+  background: linear-gradient(90deg, #0D2555, #1A4FA0);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
 
 @media (max-width: 700px) {
   .hero-inner {
