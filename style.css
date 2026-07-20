@@ -2156,6 +2156,19 @@ textarea {
   color: rgba(255, 255, 255, .8);
 }
 
+.footer-agency-link {
+  background: linear-gradient(90deg, #4F6EF7, #A855F7);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-decoration: none;
+  font-weight: 500;
+  transition: opacity 0.2s ease;
+}
+.footer-agency-link:hover {
+  opacity: 0.75;
+}
+
 /* ---------- SOCIAL BUTTONS ---------- */
 .social-btns {
   display: flex;
