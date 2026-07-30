@@ -98,6 +98,13 @@
             line-height: 1.6;
         }
 
+        /* alternating white / blue tiles — checkerboard in the 2-col grid */
+        .question-item:nth-child(4n+2),
+        .question-item:nth-child(4n+3) {
+            border-color: rgba(26, 122, 191, 0.28);
+            background: linear-gradient(145deg, rgba(26, 122, 191, 0.04), rgba(26, 122, 191, 0.09));
+        }
+
         .help-banner {
             margin-top: 48px;
             background: linear-gradient(135deg, rgba(26, 122, 191, 0.08), rgba(26, 122, 191, 0.04));
@@ -226,6 +233,17 @@
                 grid-template-columns: 1fr;
             }
 
+            /* single column: alternate every other tile instead of checkerboard */
+            .question-item:nth-child(4n+3) {
+                border-color: var(--clr-border);
+                background: #fff;
+            }
+
+            .question-item:nth-child(even) {
+                border-color: rgba(26, 122, 191, 0.28);
+                background: linear-gradient(145deg, rgba(26, 122, 191, 0.04), rgba(26, 122, 191, 0.09));
+            }
+
             .features-grid {
                 grid-template-columns: repeat(2, 1fr);
             }
@@ -313,8 +331,8 @@
                     <div style="font-size:3.8rem;line-height:1;">&#x1F1EC;&#x1F1E7;</div>
                     <p
                         style="font-family:var(--font-heading);font-size:1.35rem;font-style:italic;color:#fff;margin:0;line-height:1.4;">
-                        &ldquo;The limits of my language are the limits of my world.&rdquo;</p>
-                    <p style="color:rgba(255,255,255,0.65);font-size:0.82rem;margin:0;">&mdash; Ludwig Wittgenstein</p>
+                        Struggling to use English in real situations?</p>
+                    <p style="color:rgba(255,255,255,0.65);font-size:0.82rem;margin:0;">Feel free to message us, we can help!</p>
                 </div>
                 <div class="hero-card hero-card--float hero-card--float-1">
                     <span class="badge-dot badge-dot--green"></span>
@@ -530,7 +548,7 @@
                         English.</p>
                 </div>
 
-                <div class="feature-card fade-up anim-delay-3">
+                <div class="feature-card feature-card--accent fade-up anim-delay-3">
                     <div class="feature-card-icon">&#x270F;&#xFE0F;</div>
                     <h3>Interactive &amp; Engaging Exercises</h3>
                     <p>Learn by doing &mdash; with activities that make language stick and build fluency step by step.
@@ -550,6 +568,13 @@
                     <p>Alongside language skills, we help you develop the confidence to speak up, express yourself
                         clearly, and
                         feel comfortable using English in any situation.</p>
+                </div>
+
+                <div class="feature-card feature-card--accent fade-up anim-delay-3">
+                    <div class="feature-card-icon">&#x1F9ED;</div>
+                    <h3>Personalized Feedback &amp; Guidance</h3>
+                    <p>Receive constructive, individualized feedback on your speaking, pronunciation, vocabulary, and
+                        grammar, so you can steadily improve your confidence and communicate more naturally.</p>
                 </div>
 
             </div>
@@ -784,7 +809,7 @@
         </div>
         <div class="footer-bottom">
             <div class="container">
-                <p>&copy; 2026 Panoramic Learning&trade; , All rights reserved.</p>
+                <p>&copy; 2026 Panoramic Learning&trade; , All rights reserved. &middot; <a href="privacy-policy.html" class="footer-agency-link">Privacy Policy</a></p>
                 <p>Designed &amp; built by <a href="https://dwygrowth.com" target="_blank" rel="noopener" class="footer-agency-link">DWY · Growth</a></p>
             </div>
         </div>
