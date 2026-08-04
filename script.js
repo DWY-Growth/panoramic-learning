@@ -389,11 +389,13 @@ const bookingForm = document.getElementById('booking-form');
 if (bookingForm) {
   bookingForm.addEventListener('submit', (e) => {
     e.preventDefault();
-    const name  = bookingForm.querySelector('#f-name').value.trim();
-    const email = bookingForm.querySelector('#f-email').value.trim();
-    const level = bookingForm.querySelector('#f-level').value;
+    // Only name and email are marked required in the form.
+    const nameField  = bookingForm.querySelector('#f-name');
+    const emailField = bookingForm.querySelector('#f-email');
+    const name  = nameField  ? nameField.value.trim()  : '';
+    const email = emailField ? emailField.value.trim() : '';
 
-    if (!name || !email || !level) {
+    if (!name || !email) {
       alert('Please fill in all required fields.');
       return;
     }
